@@ -1,5 +1,3 @@
-
-
 function trocar(cor){
     document.body.style.background=cor;
 }
@@ -10,13 +8,12 @@ function validar(){
     let usuario = document.getElementById("usuario").value;
     let senha = document.getElementById("senha").value;
 
-    if(usuario === "Ribamar" && senha === "curintia"){
+    if(usuario === "Ribamar" && senha === "Curint14"){
         window.open("./quiz.html")
     }else{
         alert("usuario ou senha inválidos")
     }
 }
-
 
 // SlideShow
 function slides() {
@@ -26,7 +23,7 @@ function slides() {
     setInterval(() => {
         document.getElementById("imagensBanner").src = imagePaths[currentIndex];
         currentIndex = (currentIndex + 1) % imagePaths.length;
-    }, 3000);
+    }, 1500);
 }
 
 function iniciarQuiz() {
@@ -96,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Alert de bem vindo
 if (document.title === "Página principal") {
     alert("Seja bem-vindo!");
+    alert("Suas credenciais são:\n\nLogin: Ribamar\n\nSenha: Curint14");
 }
-
 
 slides();
