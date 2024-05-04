@@ -1,13 +1,11 @@
-// Alert de bem vindo
-if (document.title === "Página principal") {
-    alert("Seja bem-vindo!");
+
+
+function trocar(cor){
+    document.body.style.background=cor;
 }
-
-
 
 // Tela de login
 function validar(){
-
     //declarando as variaveis
     let usuario = document.getElementById("usuario").value;
     let senha = document.getElementById("senha").value;
@@ -21,18 +19,14 @@ function validar(){
 
 
 // SlideShow
-let ssImagens = ['./img/b1.jpg', './img/b2.jpg', './img/b3.jpeg', './img/b4.png'];
-let index = 0;
-let time = 3000;
+function slides() {
+    let imagePaths = ['./src/img/b1.jpg', './src/img/b2.jpg', './src/img/b3.jpeg', './src/img/b4.png'];
+    let currentIndex = 0;
 
-function slides(){
-    document.getElementById("imagensBanner").src=ssImagens[index];
-    index++;
-
-    if(index == ssImagens.length){
-        index=0;
-    }
-    setTimeout(slides, time);
+    setInterval(() => {
+        document.getElementById("imagensBanner").src = imagePaths[currentIndex];
+        currentIndex = (currentIndex + 1) % imagePaths.length;
+    }, 3000);
 }
 
 function iniciarQuiz() {
@@ -99,7 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-    
-    MudarFundo();
-    slides();
+// Alert de bem vindo
+if (document.title === "Página principal") {
+    alert("Seja bem-vindo!");
+}
 
+
+slides();
