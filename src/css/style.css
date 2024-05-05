@@ -47,23 +47,36 @@ a:hover{
 
 .box2 {
     float: left;
-    width: 100%;
+    width: 50%;
     height: 560px;
-    display: flex;
     justify-content: center;
     font-family: "Josefin Sans", sans-serif;
 }
 
 #imagensBanner{
-    margin: 60px;
-    border-radius: 50px;
-    width:550px;
-    height:420px;
+    margin: 100px;
+    border-radius: 10px;
+    width:370px;
+    height:270px;
 }
 
-footer{
-    float: right;
+.box3{
+    padding: 100px;
+    float: left;
+    width: 50%;
+    height: 560px;
+    justify-content: center;
     font-family: "Josefin Sans", sans-serif;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkolivegreen;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .contato{
